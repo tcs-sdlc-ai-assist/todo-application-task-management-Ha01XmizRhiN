@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    tab-size: 4;
+  }
+
+  body {
+    @apply bg-white text-gray-900 antialiased;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  h1 {
+    @apply text-3xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+
+  h3 {
+    @apply text-xl font-semibold;
+  }
+
+  h4 {
+    @apply text-lg font-medium;
+  }
+
+  a {
+    @apply text-blue-600 underline-offset-2 hover:text-blue-800;
+  }
+
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-blue-600;
+    outline-style: solid;
+  }
+}
+
+@layer components {
+  .skip-to-content {
+    @apply absolute left-0 top-0 -translate-y-full bg-blue-600 px-4 py-2 text-white transition-transform focus:translate-y-0;
+    z-index: 9999;
+  }
+}
